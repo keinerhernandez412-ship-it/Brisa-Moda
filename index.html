@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brisa Moda | Tienda de ropa</title>
+
+    <!-- Bootstrap 5.3.8 (CSS) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Íconos de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!--Fuente de la tienda (Google fonts)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    />
+
+    <!-- Nuestros estilos (siempre después de Bootstrap) -->
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!-- PASO 2: Barra de navegación -->
+    <!---BARRA DE NAVEGACIÓN ===== -->
+
+    <header class="sticky-top">
+      <nav
+        class="navbar navbar-expand-lg bg-body border-bottom"
+        aria-label="Menú principal"
+      >
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#inicio">
+            <i class="bi bi-bag-heart"></i>
+
+            <span class="text-coral">Brisa</span>
+            <span class="fw-light">Moda</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuTienda"
+            aria-controls="menuTienda"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menuTienda">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#inicio"
+                  >Inicio</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#categorias">Categorías</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#productos">Productos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#preguntas">Preguntas</a>
+              </li>
+            </ul>
+
+            <button
+              class="btn btn-outline-dark position-relative"
+              type="button"
+            >
+              <i class="bi bi-bag"></i> Carrito
+
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-danger"
+                id="contadorCarrito"
+                >0</span
+              >
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- PASO 3: Sección principal (hero) -->
+      <section class="py-5 bg-arena" id="inicio">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-md-6 text-center text-md-start">
+              <span class="badge text-bg-dark mb-3">Nueva coleccion 2026</span>
+              <h1 class="display-4 fw-bold">Ropa comoda para tu dia a dia</h1>
+              <p class="lead text-body-secondary my-3">
+                Prendas frescas, de buena calidad y a precios justos
+              </p>
+              <div
+                class="d-grid gap-2 d-sm-flex justify-content-sm-center justify-content-md-start"
+              >
+                <a href="#productos" class="btn btn-coral btn-lg px-4"
+                  >Ver productos</a
+                >
+                <a href="#categorias" class="btn btn-outline-dark btn-lg px-4"
+                  >Categorías</a
+                >
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="img/hero.jpg"
+                class="img-fluid rounded-4 shadow"
+                width="800"
+                height="600"
+                alt="Modelo con ropa casual de la nueva coleccion"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BENEFICIOS ===== -->
+      <section class="beneficios border-bottom">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-3 g-3">
+            <div class="col d-flex align-items-center gap-3">
+              <i class="bi bi-truck fs-2"></i>
+              <div>
+                <p class="fw-semibold mb-0">Envío gratis</p>
+                <p class="small text-body-secondary mb-0">
+                  En compras desde $150.000
+                </p>
+              </div>
+            </div>
+
+            <div class="col d-flex align-items-center gap-3">
+              <i class="bi bi-arrow-repeat fs-2"></i>
+              <div>
+                <p class="fw-semibold mb-0">Cambios fáciles</p>
+                <p class="small text-body-secondary mb-0">
+                  Tienes 30 días para cambiar
+                </p>
+              </div>
+            </div>
+
+            <div class="col d-flex align-items-center gap-3">
+              <i class="bi bi-shield-check fs-2"></i>
+              <div>
+                <p class="fw-semibold mb-0">Pago seguro</p>
+                <p class="small text-body-secondary mb-0">
+                  Tarjeta, PSE o contraentrega
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CATEGORÍAS ===== -->
+      <section class="py-5" id="categorias">
+        <div class="container">
+          <h2 class="text-center mb-4">Compra por categoría</h2>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <a
+                href="#productos"
+                class="card text-bg-dark border-0 text-decoration-none overflow-hidden categoria"
+              >
+                <img
+                  src="img/cat-hombre.jpg"
+                  class="card-img"
+                  alt="Ropa para hombre"
+                />
+                <div class="card-img-overlay d-flex align-items-end">
+                  <h3 class="h4 mb-0">Hombre</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a
+                href="#productos"
+                class="card text-bg-dark border-0 text-decoration-none overflow-hidden categoria"
+              >
+                <img
+                  src="img/cat-mujer.jpg"
+                  class="card-img"
+                  alt="Ropa para mujer"
+                />
+                <div class="card-img-overlay d-flex align-items-end">
+                  <h3 class="h4 mb-0">Mujer</h3>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4">
+              <a
+                href="#productos"
+                class="card text-bg-dark border-0 text-decoration-none overflow-hidden categoria"
+              >
+                <img
+                  src="img/cat-accesorios.jpg"
+                  class="card-img"
+                  alt="Accesorios de moda"
+                />
+                <div class="card-img-overlay d-flex align-items-end">
+                  <h3 class="h4 mb-0">Accesorios</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PASO 6: Productos destacados -->
+      <!-- Botones para filtrar por categoría -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <button
+          type="button"
+          class="btn btn-dark btn-filtro active"
+          data-filtro="todos"
+        >
+          Todos
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-dark btn-filtro"
+          data-filtro="hombre"
+        >
+          Hombre
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-dark btn-filtro"
+          data-filtro="mujer"
+        >
+          Mujer
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-dark btn-filtro"
+          data-filtro="accesorios"
+        >
+          Accesorios
+        </button>
+      </div>
+      <!-- ===== PRODUCTOS DESTACADOS ===== -->
+
+      <section class="py-5 bg-body-tertiary" id="productos">
+        <div class="container">
+          <h2 class="text-center mb-4">Productos destacados</h2>
+          <div class="row row-cols-2 row-cols-lg-3 g-3 g-md-4">
+            <!-- Producto 1 -->
+            <div class="col" data-categoria="hombre">
+              <div class="card h-100 tarjeta-producto">
+                <span
+                  class="badge text-bg-success position-absolute top-0 start-0 m-2"
+                  >Nuevo</span
+                >
+                <img
+                  src="img/camiseta.jpg"
+                  class="card-img-top h-auto"
+                  width="600"
+                  height="750"
+                  alt="Camiseta básica blanca de algodón"
+                />
+                <div class="card-body">
+                  <p class="small text-body-secondary mb-1">Hombre</p>
+                  <h3 class="h6 card-title">Camiseta básica</h3>
+                  <p class="fw-bold mb-0">$45.000</p>
+                </div>
+                <div
+                  class="card-footer bg-transparent border-0 d-flex gap-2 pb-3"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm flex-grow-1 btn-agregar"
+                    data-nombre="Camiseta básica"
+                    data-precio="45000"
+                  >
+                    <i class="bi bi-bag-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col" data-categoria="hombre">
+              <div class="card h-100 tarjeta-producto">
+                <img
+                  src="img/jean.jpg"
+                  class="card-img-top h-auto"
+                  width="600"
+                  height="750"
+                  alt="Jean slim para hombre"
+                />
+                <div class="card-body">
+                  <p class="small text-body-secondary mb-1">Hombre</p>
+                  <h3 class="h6 card-title">Jean slim</h3>
+                  <p class="fw-bold mb-0">$120.000</p>
+                </div>
+                <div
+                  class="card-footer bg-transparent border-0 d-flex gap-2 pb-3"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm flex-grow-1 btn-agregar"
+                    data-nombre="Jean slim"
+                    data-precio="120000"
+                  >
+                    <i class="bi bi-bag-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 3 (en oferta) -->
+            <div class="col" data-categoria="mujer">
+              <div class="card h-100 tarjeta-producto">
+                <span
+                  class="badge text-bg-danger position-absolute top-0 start-0 m-2"
+                  >-20 %</span
+                >
+                <img
+                  src="img/vestido.jpg"
+                  class="card-img-top h-auto"
+                  width="600"
+                  height="750"
+                  alt="Vestido floral de manga corta"
+                />
+                <div class="card-body">
+                  <p class="small text-body-secondary mb-1">Mujer</p>
+                  <h3 class="h6 card-title">Vestido floral</h3>
+                  <p class="mb-0">
+                    <span class="fw-bold text-danger">$120.000</span>
+                    <del class="small text-body-secondary">$150.000</del>
+                  </p>
+                </div>
+                <div
+                  class="card-footer bg-transparent border-0 d-flex gap-2 pb-3"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm flex-grow-1 btn-agregar"
+                    data-nombre="Vestido floral"
+                    data-precio="120000"
+                  >
+                    <i class="bi bi-bag-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col" data-categoria="mujer">
+              <div class="card h-100 tarjeta-producto">
+                <span
+                  class="badge text-bg-success position-absolute top-0 start-0 m-2"
+                  >Nuevo</span
+                >
+                <img
+                  src="img/blusa.jpg"
+                  class="card-img-top h-auto"
+                  width="600"
+                  height="750"
+                  alt="Blusa de lino"
+                />
+                <div class="card-body">
+                  <p class="small text-body-secondary mb-1">Mujer</p>
+                  <h3 class="h6 card-title">Blusa de lino</h3>
+                  <p class="fw-bold mb-0">$85.000</p>
+                </div>
+                <div
+                  class="card-footer bg-transparent border-0 d-flex gap-2 pb-3"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm flex-grow-1 btn-agregar"
+                    data-nombre="Blusa de lino"
+                    data-precio="85000"
+                  >
+                    <i class="bi bi-bag-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="col" data-categoria="accesorios">
+              <div class="card h-100 tarjeta-producto">
+                <img
+                  src="img/gorra.jpg"
+                  class="card-img-top h-auto"
+                  width="600"
+                  height="750"
+                  alt="Gorra clásica"
+                />
+                <div class="card-body">
+                  <p class="small text-body-secondary mb-1">Accesorios</p>
+                  <h3 class="h6 card-title">Gorra clásica</h3>
+                  <p class="fw-bold mb-0">$35.000</p>
+                </div>
+                <div
+                  class="card-footer bg-transparent border-0 d-flex gap-2 pb-3"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm flex-grow-1 btn-agregar"
+                    data-nombre="Gorra clásica"
+                    data-precio="35000"
+                  >
+                    <i class="bi bi-bag-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="col" data-categoria="accesorios">
+              <div class="card h-100 tarjeta-producto">
+                <img
+                  src="img/tenis.jpg"
+                  class="card-img-top h-auto"
+                  width="600"
+                  height="750"
+                  alt="Tenis blancos"
+                />
+                <div class="card-body">
+                  <p class="small text-body-secondary mb-1">Accesorios</p>
+                  <h3 class="h6 card-title">Tenis blancos</h3>
+                  <p class="fw-bold mb-0">$210.000</p>
+                </div>
+                <div
+                  class="card-footer bg-transparent border-0 d-flex gap-2 pb-3"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-sm flex-grow-1 btn-agregar"
+                    data-nombre="Tenis blancos"
+                    data-precio="210000"
+                  >
+                    <i class="bi bi-bag-plus"></i> Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASO 12: Carrusel de promociones -->
+
+      <!-- PASO 13: Preguntas frecuentes -->
+
+      <!-- PASO 14: Suscripción -->
+    </main>
+
+    <!-- PASO 15: Pie de página -->
+    <!-- ===== AVISO (TOAST) ===== -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="avisoCarrito"
+        class="toast align-items-center text-bg-dark border-0"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body">Producto agregado.</div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PANEL DEL CARRITO (OFFCANVAS) ===== -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="panelCarrito"
+      aria-labelledby="tituloCarrito"
+    >
+      <div class="offcanvas-header border-bottom">
+        <h2 class="offcanvas-title h5" id="tituloCarrito">
+          <i class="bi bi-bag"></i> Tu carrito
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <ul
+          class="list-group list-group-flush flex-grow-1"
+          id="listaCarrito"
+        ></ul>
+        <div class="border-top pt-3">
+          <div class="d-flex justify-content-between fs-5 mb-3">
+            <span>Total</span>
+            <strong id="totalCarrito">$ 0</strong>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-dark" id="btnPagar">
+              Finalizar compra
+            </button>
+            <button type="button" class="btn btn-outline-danger" id="btnVaciar">
+              Vaciar carrito
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5.3.8 (JavaScript + Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Nuestro JavaScript -->
+    <script src="js/tienda.js"></script>
+  </body>
+</html>
